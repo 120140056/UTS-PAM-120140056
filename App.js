@@ -233,7 +233,7 @@ function Home() {
 
       <TodoList todosData={todos.filter(todo => todo.isToday)}/>
 
-      <Text style={styles.HomeTitle}>Tommorow</Text>
+      <Text style={[styles.HomeTitle, {alignSelf: 'flex-end'}]}>Upcoming</Text>
       <TodoList todosData={todos.filter(todo => !todo.isToday)}/>
       <TouchableOpacity onPress={() => navigation.navigate('Add Menu')} style={styles.HomeButton}>
         <Text style={styles.HomeButtonPlus}>+</Text>
@@ -366,8 +366,7 @@ function Info() {
       <Text></Text>
       <Text>Aplikasi ini dibuat untuk memenuhi Ujian Tengah Semester (UTS) mata kuliah Pengembangan Aplikasi Mobile (PAM, IF3026) TA 2022/2023.</Text>
       <Text></Text>
-      <Text>GitHub : </Text>
-      <Text>.apk : </Text>
+      <Text>GitHub : https://github.com/120140056/UTS-PAM-120140056</Text>
     </View>
   )
 }
